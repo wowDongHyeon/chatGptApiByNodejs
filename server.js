@@ -20,6 +20,9 @@ const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
+console.log(`organization Key: ${process.env.OPENAI_ORGANIZATION}`); // organization 키 출력
+console.log(`API Key: ${process.env.OPENAI_API_KEY}`); // API 키 출력
+
 const openai = new OpenAIApi(configuration);
 console.log('1');
 
