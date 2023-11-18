@@ -32,8 +32,8 @@ app.post('/chat', async (req, res) => {
     console.log('시작전');
     const response = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
-      messages: [{ role: "user", content: req.body.message }],
-      // messages: [{ role: "user", content: "안녕" }],
+      //messages: [{ role: "user", content: req.body.message }],
+      messages: [{ role: "user", content: "안녕" }],
     });
     console.log('시작후');
     res.json(response.data.choices[0].message.content);
